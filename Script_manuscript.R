@@ -34,12 +34,14 @@ library(Hmsc)
 ################## Uploading dataset ##################
 
 # The dataset contains raw  morphological and phenological data: 
-df <- read.csv("https://www.dropbox.com/s/six49bn7ncinfpx/2020_Oenothera_Phenology.csv?dl=1")
+df <- read.csv("https://www.dropbox.com/s/a5k0eduj0dp6z5c/2020_Oenothera_Phenology.csv?dl=1")
 # The dataset contains the individual plant ID 
-Tag <- read.csv("https://www.dropbox.com/s/lpjiaph911jj681/2020_O.organ._Tag.csv?dl=1")
+Tag <- read.csv("https://www.dropbox.com/s/gydinnspejxk78w/2020_O.organ.Tag.csv?dl=1")
 aggregate(Origin ~ Accession.ID, FUN = length, data = Tag) # Appendix table A 
 aggregate(Origin ~ Accession.., FUN = length, data = Tag) # Appendix table A
 
+# Below are all summarized datasets from the above two datasets df and Tag 
+ 
 # The dataset contains the summairzed phenological info for each day from df 
 day <- read.csv("https://www.dropbox.com/s/loxs9v1nvcdz49l/2020_Phenology.csv?dl=1")
 
