@@ -433,8 +433,8 @@ fn_nb <- glm.nb(fn ~ Origin,  dfn)
 fn_nb1 <- glmer.nb(fn ~ Origin + (1|Accession..), dfn)
 fn_nb2 <- glm.nb(fn ~ Origin + Accession.., dfn)
 
-AIC(fn_nb,fn_new)
-AIC(fn_nb1,fn_new1)
+AIC(fn_nb,fn_nb1)
+AIC(fn_nb1,fn_nb2)
 # fn_nb is much better -- chaning to NB distribution highly improves the likelihood
 AIC(fn_nb1,fn_nb) #fn_nb1 is better
 AIC(fn_nb1,fn_nb2) # fn_nb1 is better
