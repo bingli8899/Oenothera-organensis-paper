@@ -772,7 +772,7 @@ d.sl.after23 <- d.sl[d.sl$type == "random",]
 # Check if the sampling method has any bias 
 m.sl <- lmer(sl ~ Origin + (1|Days) + (1|Tag) + (1|Accession..), data = d.sl) # All data 
 Anova(m.sl) # p = 0.002696 ** 
-tab_model(m.sl.2, show.ci = 0.98) # effect estimates = -0.78 for NM 
+tab_model(m.sl, show.ci = 0.98) # effect estimates = -0.78 for NM 
 length(d.sl$sl)
 
 # weekly
@@ -943,7 +943,7 @@ plot_model(m.sh.weekly, type = "diag")[3]
 plot_model(m.sh.weekly, type = "diag")[4] 
 
 plot_model(m.sh, type = "est")
-plot_model(m.sh, type = "pred", terms = "Origin", show.data = T, jitter = T, ci.style = "box")
+plot_model(m.sh, type = "pred", terms = "Origin", show.data = T, jitter = T, ci.style = "bar")
 plot_model(m.sh, type = "re", terms = "Origin", show.data = T) 
 
 ## Bartlett test 
@@ -1229,6 +1229,9 @@ plot_model(m.nv.weekly, type = "re", terms = "Origin", show.data = T)
 ## Since we will change to use weekly data, so we assigned d.nh as d.nh.weekly 
 d.nh <- d.nh.weekly 
 length(d.nh.weekly$nv)
+
+R.version
+citation()
 
 ## Bartlett test 
 # Are data normally distributed? 
