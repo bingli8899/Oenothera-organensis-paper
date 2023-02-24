@@ -1,5 +1,5 @@
 # Oenothera-organensis-paper
-R script for O. organensis paper (IJPS)
+R script for O. organensis paper (IJPS) -- script_manuscript.md
 
 Tag dataset: https://www.dropbox.com/s/gydinnspejxk78w/2020_O.organ.Tag.csv?dl=1
 
